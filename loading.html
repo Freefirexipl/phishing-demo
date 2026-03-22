@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading...</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Logging in...</h2>
+<p>Please wait...</p>
+
+<script>
+const params = window.location.search;
+setTimeout(() => {
+    window.location.href = "result.html" + params;
+}, 2000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+        }
+
+        .box {
+            background: white;
+            padding: 25px;
+            margin: 100px auto;
+            width: 350px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        .warning {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>⚠️ Phishing Simulation Result</h2>
+    <p id="output"></p>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+let user = params.get("user");
+let pass = params.get("pass");
+
+document.getElementById("output").innerHTML =
+"Captured Username: <b>" + user + "</b><br><br>" +
+"Captured Password: <b>" + pass + "</b><br><br>" +
+"<span class='warning'>This is a simulation. No data is stored.</span>";
+</script>
+
+</body>
+</html>
